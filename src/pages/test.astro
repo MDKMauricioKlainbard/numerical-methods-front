@@ -1,0 +1,23 @@
+---
+import MathField from "../components/MathField.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="test">
+  <MathField />
+  <p>$$\frac{"\\pi"}{2}$$</p>
+  <button id="getMathFieldValue">a</button>
+  <div id="math-equation">
+
+  </div>
+</Layout>
+
+<script src="https://unpkg.com/mathlive"></script>
+
+<script>
+    import "../scripts/getMathFieldValue"
+    import "../scripts/renderMathInDocument"
+    import methods from "../api/routes"
+    console.log(await methods.functionRoots.bisection("x", -1, 2))
+</script>

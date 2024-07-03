@@ -1,0 +1,30 @@
+---
+import MathChart from "../components/FunctionRoots/MathChartRoots"
+import MathField from "../components/MathField.astro";
+import Layout from "../layouts/Layout.astro";
+import FormRoots from "../components/FunctionRoots/FormRoots"
+---
+
+<Layout title="test 2">
+    <MathField/>
+    <select id="function-roots-method">
+        <option value="bisection">
+            Bisección
+        </option>
+        <option value="regula-falsi">
+            Regula Falsi
+        </option>
+        <option value="secant">
+            Secante
+        </option>
+        <option value="newton-raphson">
+            Newton-Raphson
+        </option>
+        <option value="fixed-point">
+            Punto Fijo
+        </option>
+    </select>
+    <FormRoots client:only/>
+    <MathChart client:load/>
+</Layout>
+
