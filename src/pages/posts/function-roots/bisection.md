@@ -2,6 +2,8 @@
 layout: "../../../layouts/MarkdownTheoryLayout.astro"
 author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
+animation: https://www.youtube.com/embed/2XrQ_trcHhs
+title: Método de la bisección
 ---
 
 Existe un teorema matemático que nos permite determinar la existencia de una raíz de un intervalo cerrado [a,b]. Este es el [teorema del valor intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio) para funciones continuas o TVI.
@@ -66,11 +68,6 @@ Es |f(c)|< tolerancia ? Si lo es, se detiene el algoritmo y se retorna c como so
 f(a)*f(c)< 0 ? Si lo es, entonces a=a y b=c: [a,c]. Si no lo es, entonces a=c y b=b: [c,b]
 <br/>
 **CIERRE BUCLE**
+Paso 4: Se retorna la última aproximación xr calculada.
 
 
-
-A veces no queremos extendernos demasiado con estos métodos. Pueden haber ocasiones en las que se requieran muchos pasos para llegar a la solución exacta, pero supóngase que la aproximación de la raíz en el paso 4 es x=0.999998 y recién en el paso 100 es la solución exacta x=1. Fíjese que se requieren cien pasos para llegar a la solución exacta cuando en el cuarto paso ya se tiene una solución lo suficientemente aproximada. Conviene dejar de lado el perfeccionismo y fijar una "tolerancia" al error. Diremos que hallamos la solución al problema cuando hallemos una aproximación "k" tal que:
-
-$$|f(k)|<tolerancia$$
-
-Fíjese que la tolerancia debe ser un número positivo. 

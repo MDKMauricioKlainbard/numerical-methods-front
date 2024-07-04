@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function FormRoots() {
-    const [method, setMethod] = useState("");
+    const [method, setMethod] = useState("bisection");
     useEffect(() => {
         document.getElementById("function-roots-method").addEventListener("change", () => {
             setMethod(document.getElementById("function-roots-method").value)
