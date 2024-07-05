@@ -4,6 +4,8 @@ author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
 animation: https://www.youtube.com/embed/LYkdLqrCetY
 title: Método de la secante  
+nextPage: "/posts/function-roots/newton-raphson"
+titleNextPage: "Método de Newton Raphson"
 ---
 
 A partir de aquí, empezamos a ver métodos abiertos, por lo que dejamos de lado el teorema de valor intermedio. Ya no tenemos un intervalo donde podamos asegurar la existencia de la raíz, sino un conjunto de aproximaciones iniciales que nos sirvan para encontrar la raíz.

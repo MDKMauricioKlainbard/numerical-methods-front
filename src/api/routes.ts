@@ -24,8 +24,8 @@ const methods = {
         newtonRaphson: async (latex: string, firstApproximation: number) => {
             return mathAPI.post(routes.functionRoots.newtonRaphson, { latex, firstApproximation })
         },
-        fixedPoint: async (latex: string, firstApproximation: number) => {
-            return mathAPI.post(routes.functionRoots.fixedPoint, { latex, firstApproximation })
+        fixedPoint: async (latex: string, firstApproximation: number, parameter: number) => {
+            return mathAPI.post(routes.functionRoots.fixedPoint, { latex, firstApproximation, parameter })
         }
     }
 }

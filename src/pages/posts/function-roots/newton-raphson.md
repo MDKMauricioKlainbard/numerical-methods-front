@@ -4,6 +4,8 @@ author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
 animation: https://www.youtube.com/embed/ySQ_tyw6ttk
 title: Método de Newton-Raphson
+nextPage: "/posts/function-roots/fixed-point"
+titleNextPage: "Método de Punto Fijo"
 ---
 
 Antes de iniciar a estudiar este método, le recomiendo analizar la teoría plasmada en el [**método de la secante**](/posts/function-roots/secant), pues ambos métodos comparten un mismo principio teórico. Una vez leída la teoría, regrese aquí y siga con su estudio.

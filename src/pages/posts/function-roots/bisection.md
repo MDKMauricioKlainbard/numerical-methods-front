@@ -3,7 +3,9 @@ layout: "../../../layouts/MarkdownTheoryLayout.astro"
 author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
 animation: https://www.youtube.com/embed/2XrQ_trcHhs
-title: Método de la bisección
+title: Método de Bisección
+nextPage: "/posts/function-roots/regula-falsi"
+titleNextPage: "Método de Regula Falsi"
 ---
 
 Existe un teorema matemático que nos permite determinar la existencia de una raíz de un intervalo cerrado [a,b]. Este es el [teorema del valor intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio) para funciones continuas o TVI.

@@ -1,7 +1,125 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+const image =
+  "https://img.freepik.com/premium-vector/cute-cat-sitting-laptop-with-coffee-plant-illustration-developer-programmer-icon-isolated_138676-1110.jpg";
 ---
 
 <Layout title="Inicio">
-	<p>¡Hola a todos! Esta es mi página personal para guardar mis apunte de ingeniería</p>
+  <div class="page-container">
+    <div id="card-presentation">
+      <img src={image} id="profile-photo" />
+      <p id="card-name">Mauricio Klainbard</p>
+      <p id="card-title">Desarrollador Web</p>
+    </div>
+    <br />
+    <div id="text-presentation">
+      <h1>5 de Julio de 2024</h1>
+      <p>
+        ¡Hola a todos! Mi nombre es Mauricio Daniel Klainbard. Soy estudiante de
+        Ingeniería Industrial de la Universidad Nacional de Cuyo y también soy
+        desarrollador web.
+      </p>
+      <br />
+      <p>
+        Aún soy algo nuevo en esto. De hecho, es la primera vez que diseño una
+        página compatible para moviles. Si bien el diseño es simple, espero irlo
+        mejorando de a poco conforme vaya logrando pulir mis habilidades.
+      </p>
+      <br />
+      <p>
+        Esta página que he hecho está destinada a albergar teoría de métodos
+        numéricos y también a incorporar herramientas gráficas y funcionales
+        para resolver una gran serie de problemas utilizando estos mismos
+        métodos.
+      </p>
+      <br />
+      <p>
+        En el día que escribo esto: 05/07/2024 (cinco de julio de 2024), he
+        incorporado teoría de métodos numéricos para hallar raíces de funciones,
+        así como una calculadora gráfica para resolver problemas. Esta solo es
+        la primera parte, pues planeo añadir más contenido. Por ahora tengo
+        planeada añadir cinco partes más:
+        <br />
+        <br />
+        <ol>
+          <li>Resolución de sistemas de ecuaciones lineales.</li>
+          <li>
+            Interpolación de Newton, Lagrange y aproximación por mínimos
+            cuadrados.
+          </li>
+          <li>Derivadas e integrales numéricas.</li>
+          <li>
+            Ecuaciones diferenciales ordinarias de primer y segundo orden.
+          </li>
+          <li>Ecuaciones diferenciales parciales de primer y segundo orden.</li>
+        </ol>
+        <br />
+        <p>
+          La segunda parte representa un desafío considerable, pues debo añadir
+          la posibilidad de introducir matrices y calcularlas en un lenguaje de
+          programación poco amistoso con las matrices. Sin embargo, me considero
+          capaz de lograr este objetivo.
+        </p>
+        <br />
+        <p>
+          Si has llegado hasta aquí, te agradezco tu lectura y espero que mis
+          apuntes te puedan servir de algo. ¡Nos vemos en la próxima
+          actualización!
+        </p>
+      </p>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  #profile-photo {
+    border-radius: 90px;
+    width: 300px;
+  }
+  #card-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 28px;
+    animation-name: fadeInFromCorner;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out;
+  }
+  #card-name {
+    margin-top: 10px;
+  }
+  #text-presentation {
+    animation-name: reveal;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  #text-presentation ol li {
+    padding-top: 10px;
+  }
+  #text-presentation h1 {
+    font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 2px;
+  }
+  @keyframes fadeInFromCorner {
+    0% {
+      opacity: 0;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+      opacity: 1;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>

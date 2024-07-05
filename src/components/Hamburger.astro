@@ -1,0 +1,33 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<a href="javascript:void(0);" class="icon" id="hamburger">
+  <i class="fa fa-bars"></i>
+</a>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+  hamburger.addEventListener("click", () => {
+    if (navbar.style.display === "block") {
+        navbar.style.display = "none";
+    } else {
+        navbar.style.display = "block";
+    }
+  });
+</script>
+
+<style>
+  #hamburger {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: black;
+    font-size: 17px;
+    display: block;
+    position: absolute;
+    right: 10px
+  }
+</style>

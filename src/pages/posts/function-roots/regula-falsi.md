@@ -4,6 +4,8 @@ author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
 animation: https://www.youtube.com/embed/VqMYLQs_1XI
 title: Método de Regula Falsi
+nextPage: "/posts/function-roots/secant"
+titleNextPage: "Método de Secante"
 ---
 
 Los principios del método de Regula-Falsi se basan en los mismos principios del [**método de la bisección**](/posts/function-roots/bisection). Nos basamos en el teorema del valor intermedio de funciones continuas y proponemos un intervalo [a,b] donde podamos asegurar la existencia de una raíz de la función. La única diferencia es la "regla de recurrencia", llamamos regla de recurrencia al cálculo matemático repetido que usamos para hallar nuevas aproximaciones a la raíz. En el caso de la bisección, la regla de recurrencia era:

@@ -1,6 +1,22 @@
-<nav>
+<nav id="links">
     <a href="/">Inicio</a>
-    <a href="/test">Testing</a>
     <a href="/posts">Índice</a>
-    <a href="/test2">Calculadora</a>
+    <a href="/calculator-roots">Calculadora de raíces</a>
 </nav>
+
+<style>
+    #links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background-color: black;
+        width: 100%;
+        color: white;
+        z-index: 2000;
+    }
+    #links a{
+        padding: 10px;
+        border: 0.2px solid gray;
+    }
+   
+</style>

@@ -1,5 +1,8 @@
 ---
-layout: "../../../layouts/Layout.astro"
+layout: "../../../layouts/MarkdownTheoryLayout.astro"
+title: "Introducción a raíces de funciones"
+nextPage: "/posts/function-roots/bisection"
+titleNextPage: "Método de Bisección"
 ---
 
 Los estudiantes de ingeniería están acostumbrados a lidiar con el problema de hallar las soluciones de distintas ecuaciones. Cualquier estudiante de esta carrera debería saber como resolver la siguiente ecuación:
@@ -28,15 +31,15 @@ Sin embargo, déjeme destruir todas sus esperanzas diciéndole que probablemente
 
 En estos apuntes aprenderemos los siguientes métodos:
 <br/>
-- [**Método de la Bisección**](/posts/function-roots/bisection)
+- [**1. Método de la Bisección**](/posts/function-roots/bisection)
 <br/>
-- [**Método de Regula Falsi o Falsa Posición**](/posts/function-roots/regula-falsi)
+- [**2. Método de Regula Falsi o Falsa Posición**](/posts/function-roots/regula-falsi)
 <br/>
-- [**Método de la Secante**](/posts/function-roots/secant)
+- [**3. Método de la Secante**](/posts/function-roots/secant)
 <br/>
-- [**Método de Newton-Raphson**](/posts/function-roots/newton-raphson)
+- [**4. Método de Newton-Raphson**](/posts/function-roots/newton-raphson)
 <br/>
-- [**Método de Punto Fijo**](/posts/function-roots/fixed-point)
+- [**5. Método de Punto Fijo**](/posts/function-roots/fixed-point)
 
 Los dos primeros métodos de Bisección y Regula Falsi son **métodos cerrados**, porque se conoce un intervalo cerrado de **x** en donde se sabe con seguridad que existe una raíz de la función:
 $$f(x_s)=0$$

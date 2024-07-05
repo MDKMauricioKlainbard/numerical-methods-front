@@ -3,7 +3,9 @@ layout: "../../../layouts/MarkdownTheoryLayout.astro"
 author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
 animation: https://www.youtube.com/embed/IWt9uuycKlM
-title: Método de punto fijo
+title: Método de Punto Fijo
+nextPage: "/posts/function-roots/error-criteria"
+titleNextPage: "Criterios de error"
 ---
 
 Es posible que este método no lo entienda a la primera lectura, pero no se preocupe, yo tampoco lo entiendo.

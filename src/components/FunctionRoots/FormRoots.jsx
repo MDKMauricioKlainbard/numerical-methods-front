@@ -23,10 +23,17 @@ export default function FormRoots() {
                     <label>Ingrese la segunda aproximación:</label>
                     <input id="secondApproximation" />
                 </> : <></>}
-            {(method === 'newton-raphson' || method === 'fixed-point') ?
+            {(method === 'newton-raphson') ?
                 <>
                     <label>Ingrese la primera aproximación:</label>
-                    <input id="firstApproximation-NR-FP" />
+                    <input id="firstApproximation-NR" />
+                </> : <></>}
+            {(method === 'fixed-point') ?
+                <>
+                    <label>Ingrese la primera aproximación:</label>
+                    <input id="firstApproximation-FP" />
+                    <label>Ingrese el parámetro de convergencia:</label>
+                    <input id="parameter-FP" />
                 </> : <></>}
         </form>
     )

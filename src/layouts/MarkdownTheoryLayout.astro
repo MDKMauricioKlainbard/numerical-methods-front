@@ -4,17 +4,112 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout>
-  <slot />
+  <div id="get-back">
+    <a href="/posts">Regresar al índice</a>
+  </div>
+  <h1>{frontmatter.title}</h1>
+  <div id="markdown-container">
+    <slot />
+  </div>
   {
   frontmatter?.animation ? 
-  <iframe
-    width="640"
-    height="360"
+  <div id="vid-container">
+    <iframe
     src={frontmatter.animation}
-    title="Método de bisección animado"
-    frameborder="0"
+    title={frontmatter.title}
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen></iframe> : <></>
+    allowfullscreen></iframe>
+  </div>
+   : <></>
     }
+    {
+    frontmatter?.nextPage ? <div id="next">
+      <a href={frontmatter.nextPage}>Ir a "{frontmatter.titleNextPage}"</a>
+    </div> : <></>
+    }
+    
 </Layout>
+
+<style>
+  #get-back {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    position: sticky;
+    top:70px;
+    z-index: 500;
+  }
+  #next {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    text-align: end;
+    margin-top: 20px;
+    z-index: 500;
+  }
+  #vid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #vid-container iframe {
+    width: 90%;
+    height: 400px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+  }
+  #markdown-container {
+    padding: 10px;
+  }
+</style>
+
+<style is:global>
+  #markdown-container ul{
+    margin-bottom: 8px;
+    margin-top: 8px;;
+  }
+  #markdown-container li{
+    padding: 10px;
+    padding-left: 0px;
+  }
+
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .katex {
+    height: 150%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  #table-example {
+    overflow-x: scroll;
+  }
+  table th,
+  table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  table th {
+    background-color: black;
+    color: white;
+  }
+
+  table td {
+    background-color: #f2f2f2;
+    color: black;
+  }
+</style>

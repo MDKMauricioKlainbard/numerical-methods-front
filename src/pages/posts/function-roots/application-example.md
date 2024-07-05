@@ -2,7 +2,7 @@
 layout: "../../../layouts/MarkdownTheoryLayout.astro"
 author: "Mauricio Klainbard"
 tags: ["Raíces de funciones"]
-title: Método de la bisección
+title: Ejemplo de aplicación
 ---
 
 Vamos a poner un ejemplo de aplicación de los métodos que hemos visto hasta ahora. Tomemos un problema de proyectiles y trayectorias parábolicas:
@@ -31,13 +31,52 @@ $$f'(x)=\frac{100}{\cos(x)^2}-39.2\frac{\sin(x)}{\cos(x)^3}$$
 La regla de recurrencia será:
 $$x_{r+1}=x_r-\frac{60+100\tan(x)-\frac{19.6}{\cos(x)^2}}{\frac{100}{\cos(x)^2}-39.2\frac{\sin(x)}{\cos(x)^3}}$$
 <br>
-| Pasos | Aproximación anterior | Aproximación nueva | Función evaluada en la nueva aproximación |
-|--------------|--------------|--------------|--------------|
-| 1 | 1 | -0.113758 | 28.72 |
-| 2 | -0.113758 |-0.3850954528786 | -3.35 |
-| 3 | -0.3850954528786 | -0.3602416732385 | -0.049 |
-| 4 | -0.3602416732385 | -0.3598688184878 | -0.0000104 |
-| 5 | -0.3598688184878 | -0.3598687390091 | -0.0000000000005 |
+<div id="table-example">
+<table>
+  <thead>
+    <tr>
+      <th>Pasos</th>
+      <th>Aproximación anterior</th>
+      <th>Aproximación nueva</th>
+      <th>Función evaluada en la nueva aproximación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>-0.113758</td>
+      <td>28.72</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>-0.113758</td>
+      <td>-0.3850954528786</td>
+      <td>-3.35</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>-0.3850954528786</td>
+      <td>-0.3602416732385</td>
+      <td>-0.049</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>-0.3602416732385</td>
+      <td>-0.3598688184878</td>
+      <td>-0.0000104</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>-0.3598688184878</td>
+      <td>-0.3598687390091</td>
+      <td>-0.0000000000005</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <br>
 

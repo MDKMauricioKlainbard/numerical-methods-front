@@ -1,0 +1,45 @@
+---
+import MathChart from "../components/FunctionRoots/MathChartRoots";
+import MathField from "../components/MathField.astro";
+import Layout from "../layouts/Layout.astro";
+import FormRoots from "../components/FunctionRoots/FormRoots";
+import "../styles/global.css"
+---
+
+<Layout title="Calculadora de raíces">
+  <div class="page-container">
+    <div>
+      <p>
+        Introduzca la ecuación sin usar carácteres especiales. Represente
+        siempre a la incógnita con la letra "x". Si su ecuación es x<sup>2</sup
+        >-1=0, introduzca solo la parte izquierda de la ecuación: x<sup>2</sup
+        >-1. No introduzca signos de igualdad. Puede apretar el signo del
+        teclado para abrir un teclado virtual e introducir expresiones
+        trigonométricas, logarítmicas, fracciones, inversas, valores absolutos o
+        las constantes "pi" y "e", pero no intente introducir derivadas,
+        integrales, límites, expresiones lógicas u otros símbolos.
+        <br />
+        <br />
+        Rellene los campos necesarios según el método que elija para resolver la
+        ecuación. Si la calculadora consigue resolver el método en un solo paso,
+        no se graficará nada. Solo se le dará la tabla con la aproximación calculada.
+        <br />
+        <br />
+        En los campos que se rellenan sin el teclado virtual, los números decimales
+        se escriben con el punto decimal, por ejemplo: "2.5"; si no funciona, intente
+        hacerlo con una coma en vez de un punto: "2,5". No escriba fracciones del
+        tipo "1/2", paselas a formato decimal: "0.5".
+      </p>
+    </div>
+    <MathField />
+    <select id="function-roots-method">
+      <option value="bisection"> Bisección </option>
+      <option value="regula-falsi"> Regula Falsi </option>
+      <option value="secant"> Secante </option>
+      <option value="newton-raphson"> Newton-Raphson </option>
+      <option value="fixed-point"> Punto Fijo </option>
+    </select>
+    <FormRoots client:only />
+    <MathChart client:load />
+  </div>
+</Layout>

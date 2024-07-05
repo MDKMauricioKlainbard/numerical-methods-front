@@ -1,8 +1,10 @@
 ---
-layout: "../../layouts/MarkdownTheoryLayout.astro"
+layout: "../../../layouts/MarkdownTheoryLayout.astro"
 author: "Mauricio Klainbard"
 tags: ["Criterios de error y detención de bucles"]
 title: Criterios de error y detención de bucles
+nextPage: "/posts/function-roots/application-example"
+titleNextPage: "Ejemplo de aplicación"
 ---
 
 A veces no queremos extendernos demasiado con estos métodos de raíces. Pueden haber ocasiones en las que se requieran muchos pasos para llegar a la solución exacta, pero supóngase que la aproximación de la raíz en el paso 4 es x=0.999998 y recién en el paso 100 es la solución exacta x=1. Fíjese que se requieren cien pasos para llegar a la solución exacta cuando en el cuarto paso ya se tiene una solución lo suficientemente aproximada. Conviene dejar de lado el perfeccionismo y fijar una "tolerancia" al error. Diremos que hallamos la solución al problema cuando hallemos una aproximación "k" tal que:
