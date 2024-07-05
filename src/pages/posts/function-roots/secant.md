@@ -73,7 +73,7 @@ Paso 2: INICIA BUCLE "MIENTRAS / WHILE"
 <br/>
 x<sub>r+2</sub>=x<sub>r</sub>-f(x<sub>r</sub>)(x<sub>r+1</sub>-x<sub>r</sub>)/(f(x<sub>r+1</sub>)-f(x<sub>r</sub>))
 <br/>
-Es |f(x<sub>r+2</sub>)|< tolerancia ? Si lo es, se detiene el algoritmo y se retorna xr como solución. Si no lo es, se continúa con el algoritmo.
+Es |f(x<sub>r+2</sub>)|< tolerancia ? Si lo es, se detiene el algoritmo y se retorna x<sub>r+2</sub> como solución. Si no lo es, se continúa con el algoritmo.
 <br/>
 x<sub>r</sub>=x<sub>r+1</sub>
 <br/>

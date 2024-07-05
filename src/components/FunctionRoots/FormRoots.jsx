@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./FormRoots.module.css"
 
 export default function FormRoots() {
     const [method, setMethod] = useState("bisection");
@@ -8,7 +9,7 @@ export default function FormRoots() {
         })
     }, [])
     return (
-        <form>
+        <form class={styles["form"]}>
             {(method === 'bisection' || method === 'regula-falsi') ?
                 <>
                     <label>Ingrese el extremo izquierdo del intervalo (a):</label>

@@ -67,8 +67,8 @@ export default function MathChart() {
     };
     return (
         <>
-            <button onClick={getData}>Calcular</button>
-            <div>
+            <button onClick={getData} class={styles["button"]}>Calcular</button>
+            <div class={styles["info"]}>
                 {resolved ? <>
                     <p>La aproximación obtenida es: {data.newAprox}</p>
                     <p>{data.message}</p>

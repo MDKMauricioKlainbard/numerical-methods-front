@@ -26,3 +26,20 @@
     overflow-y: auto; 
     margin-top: 40px;
 }
+
+.button {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    margin: 12px;
+    border-radius: 8px;
+}
+
+.info p {
+    margin: 12px;
+}
+
+.info {
+    text-align: left;
+}
+

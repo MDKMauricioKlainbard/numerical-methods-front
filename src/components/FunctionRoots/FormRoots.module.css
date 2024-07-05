@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.form input {
+    border: 0.2px solid black;
+    font-weight: normal;
+}

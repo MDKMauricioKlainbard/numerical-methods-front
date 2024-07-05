@@ -3,7 +3,7 @@ import MathChart from "../components/FunctionRoots/MathChartRoots";
 import MathField from "../components/MathField.astro";
 import Layout from "../layouts/Layout.astro";
 import FormRoots from "../components/FunctionRoots/FormRoots";
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 
 <Layout title="Calculadora de raíces">
@@ -31,15 +31,60 @@ import "../styles/global.css"
         tipo "1/2", paselas a formato decimal: "0.5".
       </p>
     </div>
-    <MathField />
-    <select id="function-roots-method">
-      <option value="bisection"> Bisección </option>
-      <option value="regula-falsi"> Regula Falsi </option>
-      <option value="secant"> Secante </option>
-      <option value="newton-raphson"> Newton-Raphson </option>
-      <option value="fixed-point"> Punto Fijo </option>
-    </select>
-    <FormRoots client:only />
-    <MathChart client:load />
+    <div id="math-field-container">
+      <h1>Ingrese la ecuación</h1>
+      <MathField />
+    </div>
+    <div id="options">
+      <h1>Escoja el método para calcular la raíz</h1>
+      <select id="function-roots-method">
+        <option value="bisection"> Bisección </option>
+        <option value="regula-falsi"> Regula Falsi </option>
+        <option value="secant"> Secante </option>
+        <option value="newton-raphson"> Newton-Raphson </option>
+        <option value="fixed-point"> Punto Fijo </option>
+      </select>
+      <br>
+      <div id="chart">
+        <FormRoots client:only />
+        <MathChart client:load />
+      </div>
+    </div>
   </div>
 </Layout>
+
+<style is:global>
+  #math-field {
+    width: 90vw;
+    min-height: 50px;
+    border: 1px solid #000;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+  #math-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #math-field-container h1 {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  #options {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #options h1 {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  #options select {
+    border: 0.2px solid black;
+    text-align: center;
+  }
+</style>

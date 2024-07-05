@@ -17,9 +17,9 @@ $$y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)$$
 Siendo:
 $$y=S(x), y_1=f(a),y_2=f(b), x_1=a, x_2=b$$
 $$S(x)-f(a)=\frac{f(b)-f(a)}{b-a}(x-a)$$
-Buscamos el cero de la recta tangente al cual llamaremos "**xr**", es decir:
+Buscamos el cero de la recta tangente al cual llamaremos "**x<sub>r</sub>**", es decir:
 $$S(x_r)=0 \implies -f(a)=\frac{f(b)-f(a)}{b-a}(x_r-a)$$
-Despejando **xr**:
+Despejando **x<sub>r</sub>**:
 $$x_r=a-f(a)\frac{b-a}{f(b)-f(a)}$$
 Esta será nuestra regla de recurrencia para hallar la raíz de la función. La forma en la que se actualiza el intervalo en cada paso es la misma forma que teníamos con el [**método de la bisección**](/posts/function-roots/bisection).
 
@@ -36,12 +36,12 @@ Paso 3: INICIA BUCLE "MIENTRAS / WHILE"
 <br/>
 **INICIO BUCLE**
 <br/>
-xr=a-f(a)(b-a)/(f(b)-f(a))
+x<sub>r</sub>=a-f(a)(b-a)/(f(b)-f(a))
 <br/>
-Es |f(xr)|< tolerancia ? Si lo es, se detiene el algoritmo y se retorna xr como solución. Si no lo es, se continúa con el algoritmo.
+Es |f(x<sub>r</sub>)|< tolerancia ? Si lo es, se detiene el algoritmo y se retorna x<sub>r</sub> como solución. Si no lo es, se continúa con el algoritmo.
 <br/>
-f(a)*f(xr)< 0 ? Si lo es, entonces a=a y b=xr: [a,xr]. Si no lo es, entonces a=xr y b=b: [c,xr]
+f(a)*f(x<sub>r</sub>)< 0 ? Si lo es, entonces a=a y b=x<sub>r</sub>: [a,x<sub>r</sub>]. Si no lo es, entonces a=x<sub>r</sub> y b=b: [c,x<sub>r</sub>]
 <br/>
 **CIERRE BUCLE**
 <br/>
-Paso 4: Se retorna la última aproximación xr calculada.
+Paso 4: Se retorna la última aproximación x<sub>r</sub> calculada.

@@ -19,7 +19,7 @@ $$λ[F(x_s)]=0$$
 El problema no ha cambiado, por lo que parece incoherente realizar estos arreglos, pero usted debe confiar en mí cuando le digo que, en definitiva, vamos a llegar a un resultado interesante. Ahora, sumemos x<sub>s</sub> a ambos miembros:
 $$x_s+λ[F(x_s)]=x_s$$
 Ahora declaremos una nueva función G(x) que tendrá la misma estructura que el lado izquierdo de la anterior igualdad:
-$$G(x)=x+λ[F(x_s)]$$
+$$G(x)=x+λ[F(x)]$$
 Ahora, el problema inicial F(x<sub>s</sub>)=0 es equivalente a resolver la siguiente ecuación:
 $$G(x)=x$$
 Resolver la anterior ecuación significa hallar x<sub>s</sub>, recordemos que:
