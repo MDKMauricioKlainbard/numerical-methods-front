@@ -2,7 +2,7 @@ import axios from "axios";
 import type { AxiosInstance } from "axios";
 
 const mathAPI: AxiosInstance = axios.create({
-    baseURL: 'http://localhost:3000/',
+    baseURL: 'https://numerical-methods.onrender.com/',
 })
 
 export default mathAPI
